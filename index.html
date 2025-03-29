@@ -714,16 +714,16 @@ document.addEventListener("DOMContentLoaded", function () {
               <h2 class=>Contact Using Given Information or By Send Message</h2>
 
 
-              <div class="profile-img" id="player">
+           <div class="profile-img" id="player">
     <img src="assets/img/profile/tm2.png" alt="Profile">
-    <div class="catch-text">Heyyy!!</div>
-</div>
-<div class="game-over" id="gameOverScreen">
-    <p>Game Over! Your Score: <span id="finalScore"></span></p>
-    <button onclick="restartGame()">Restart</button>
+    <div class="catch-text">Catch Me!</div>
 </div>
 
-<div id="fireworks-container"></div>
+<div class="score-board">
+    Score: <span id="score">0</span>
+</div>
+
+<button class="reset-btn" onclick="restartGame()">Restart</button>
 
 <style>
     body {
@@ -731,7 +731,6 @@ document.addEventListener("DOMContentLoaded", function () {
         color: white;
         text-align: center;
         font-family: 'Poppins', sans-serif;
-        overflow: auto; /* Allow scrolling */
         margin: 0;
     }
 
@@ -740,24 +739,15 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        transition: transform 0.3s ease, top 0.5s ease, left 0.5s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
         animation: glow 1.5s infinite alternate;
-        z-index: 999;
+        cursor: pointer;
     }
 
     .profile-img img {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        transition: transform 0.2s;
-    }
-
-    .profile-img:hover img {
-        transform: scale(1.2);
     }
 
     @keyframes glow {
@@ -765,16 +755,8 @@ document.addEventListener("DOMContentLoaded", function () {
         100% { box-shadow: 0 0 25px #ff4500; }
     }
 
-    .catch-text {
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 16px;
-        font-weight: bold;
-        color: #ff6600;
-        background: transparent;
-        padding: 5px 10px;
+    .golden-glow {
+        box-shadow: 0 0 30px gold !important;
     }
 
     .score-board {
@@ -789,162 +771,54 @@ document.addEventListener("DOMContentLoaded", function () {
         z-index: 1000;
     }
 
-    .game-over {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(255, 0, 0, 0.9);
-        padding: 20px;
-        font-size: 22px;
-        text-align: center;
-        border-radius: 10px;
-        display: none;
-        z-index: 1001;
-    }
-
-    .game-over button {
+    .reset-btn {
         background: white;
         color: black;
-        padding: 10px;
+        padding: 10px 20px;
         font-size: 18px;
         cursor: pointer;
         border: none;
         border-radius: 5px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
-    .game-over button:hover {
+    .reset-btn:hover {
         background: lightgray;
-    }
-
-    #fireworks-container {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-        display: none;
     }
 </style>
 
 <script>
     let score = 0;
-    let missCount = 0;
-    let isGameOver = false;
-    let speed = 1500;
-    let catchCount = 0;
-
     const player = document.getElementById("player");
     const scoreBoard = document.getElementById("score");
-    const gameOverScreen = document.getElementById("gameOverScreen");
-    const finalScore = document.getElementById("finalScore");
-    const fireworksContainer = document.getElementById("fireworks-container");
-
-    const winSound = new Audio("assets/sounds/win.mp3");
-    const catchSound = new Audio("assets/sounds/catch.mp3");
 
     function movePlayer() {
-        if (isGameOver) return;
-
         let randomX = Math.random() * (window.innerWidth - 120);
-        let randomY = Math.random() * (document.documentElement.scrollHeight - 120);
+        let randomY = Math.random() * (window.innerHeight - 120);
 
-        player.style.transition = "transform 0.3s ease-in-out";
         player.style.transform = `translate(${randomX}px, ${randomY}px)`;
-
-        setTimeout(movePlayer, speed);
     }
 
     player.addEventListener("click", () => {
-        if (isGameOver) return;
-
         score++;
-        catchCount++;
-        speed = Math.max(300, speed - 100);
         scoreBoard.innerText = score;
 
-        player.style.transition = "none";
-        player.style.opacity = "0";
+        // Apply golden aura effect
+        player.classList.add("golden-glow");
         setTimeout(() => {
-            player.style.opacity = "1";
-            player.style.transition = "transform 0.3s ease-in-out, opacity 0.3s";
-            movePlayer();
-        }, 1000); // Stops for 1 second
+            player.classList.remove("golden-glow");
+        }, 500); // Glow lasts 0.5 seconds
 
-        catchSound.play();
-
-        if (catchCount === 5) {
-            alert("Wow! 5 Catches! Something Special Coming 🔥");
-            player.style.boxShadow = "0px 0px 30px gold";
-        }
-
-        if (score >= 20) {
-            triggerFireworks();
-            winSound.play();
-            setTimeout(() => {
-                endGame();
-            }, 4000);
-        }
+        movePlayer();
     });
-
-    document.addEventListener("click", (event) => {
-        if (isGameOver || player.contains(event.target)) return;
-
-        missCount++;
-        if (missCount >= 5) {
-            endGame();
-        }
-    });
-
-    function endGame() {
-        isGameOver = true;
-        gameOverScreen.style.display = "block";
-        finalScore.innerText = score;
-    }
 
     function restartGame() {
-        isGameOver = false;
         score = 0;
-        missCount = 0;
-        speed = 1500;
         scoreBoard.innerText = score;
-        gameOverScreen.style.display = "none";
-        player.style.boxShadow = "none";
-        fireworksContainer.innerHTML = "";
-        fireworksContainer.style.display = "none";
         movePlayer();
     }
 
-    function triggerFireworks() {
-        fireworksContainer.style.display = "block";
-        for (let i = 0; i < 10; i++) {
-            setTimeout(() => {
-                let firework = document.createElement("div");
-                firework.style.position = "fixed";
-                firework.style.width = "10px";
-                firework.style.height = "10px";
-                firework.style.borderRadius = "50%";
-                firework.style.backgroundColor = "gold";
-                firework.style.left = Math.random() * window.innerWidth + "px";
-                firework.style.top = Math.random() * window.innerHeight + "px";
-                firework.style.transition = "transform 1s ease-out, opacity 1s ease-in";
-
-                document.body.appendChild(firework);
-
-                setTimeout(() => {
-                    firework.style.transform = "scale(3)";
-                    firework.style.opacity = "0";
-                }, 100);
-
-                setTimeout(() => {
-                    firework.remove();
-                }, 2000);
-            }, i * 300);
-        }
-    }
-
+    setInterval(movePlayer, 1500); // Moves every 1.5 seconds
     movePlayer();
 </script>
               
