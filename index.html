@@ -237,6 +237,13 @@
   if (window.location.pathname === "/sandy()") {
     openEasterEgg(); // Trigger the Easter egg if the URL matches
   }
+  // Add event listener for the "Ctrl + E" key combination
+  window.addEventListener('keydown', function(event) {
+    // Check if 'Ctrl' key is pressed along with 'E' key
+    if (event.ctrlKey && event.key === 'e') {
+      openEasterEgg(); // Trigger the Easter egg when Ctrl + E is pressed
+    }
+  });
 </script>
 
   <main class="main">
