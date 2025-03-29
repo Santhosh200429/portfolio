@@ -62,6 +62,183 @@
     </div>
   </header>
 
+  <!-- Hidden Easter egg div -->
+<div id="easter-egg" class="hidden-div" style="display:none;">
+  <div class="easter-content">
+    <span id="close-btn" class="close-btn">&times;</span>
+    <h2 class="easter-title">Congratulations!</h2>
+    <p class="easter-description">
+      You've unlocked a hidden treasure! Here's the source code for this site, feel free to explore:
+    </p>
+    <a href="https://github.com/Santhosh200429/portfolio" class="source-code-link" target="_blank">
+      View Source Code on GitHub
+    </a>
+    <div class="btn" onclick="window.location.reload();">Try Again</div>
+  </div>
+</div>
+
+<!-- Styles (CSS) -->
+<style>
+  /* General Styles for the Easter Egg */
+  #easter-egg {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Darkened overlay */
+    padding-top: 120px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+  }
+
+  .easter-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 600px;
+    width: 80%;
+    animation: fadeIn 0.5s ease-out;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Fade-In Animation for Easter Egg */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Close Button Styling */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .close-btn:hover {
+    color: #333;
+  }
+
+  /* Title and Text Styling */
+  .easter-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .easter-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  /* Source Code Link Styling */
+  .source-code-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .source-code-link:hover {
+    color: #005fa3;
+  }
+
+  /* Button Styling */
+  .btn {
+    background-color: #0077cc;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+  }
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 600px) {
+    .easter-content {
+      width: 90%;
+      padding: 25px;
+    }
+
+    .easter-title {
+      font-size: 26px;
+    }
+
+    .easter-description {
+      font-size: 16px;
+    }
+
+    .source-code-link {
+      font-size: 18px;
+    }
+
+    .btn {
+      font-size: 16px;
+      padding: 12px 28px;
+    }
+  }
+</style>
+
+<!-- Scripts (JavaScript) -->
+<script>
+  // Get the Easter egg and close button elements
+  var easterEgg = document.getElementById("easter-egg");
+  var closeBtn = document.getElementById("close-btn");
+
+  // Function to open Easter egg
+  function openEasterEgg() {
+    easterEgg.style.display = "block"; // Show the Easter egg
+    easterEgg.style.opacity = 1; // Ensure opacity transition happens
+  }
+
+  // Close the Easter egg when clicking the close button
+  closeBtn.onclick = function() {
+    easterEgg.style.display = "none"; // Hide the Easter egg
+  };
+
+  // Close the Easter egg if user clicks outside the content
+  window.onclick = function(event) {
+    if (event.target == easterEgg) {
+      easterEgg.style.display = "none"; // Hide the Easter egg
+    }
+  };
+
+  // Check if the URL path is "/sandy()"
+  if (window.location.pathname === "/sandy()") {
+    openEasterEgg(); // Trigger the Easter egg if the URL matches
+  }
+</script>
+
   <main class="main">
 
     <!-- Interactive Scrolling Text Section -->
