@@ -63,6 +63,122 @@
   </header>
 
   <main class="main">
+
+    <!-- Interactive Scrolling Text Section -->
+<section id="animated-text-scroll" class="text-scroll-section">
+    <div class="text-scroll-content">
+        <div class="text-scroll-item">
+            <h3>🚀 Elevate Your Digital Presence 🚀</h3>
+            <h3>Welcome to Santhosh's Portfolio</h3>
+            <h3>Innovating with Passion, Crafting with Precision</h3>
+        </div>
+    </div>
+</section>
+
+<style>
+/* 🌟 Premium Scrolling Text Section */
+.text-scroll-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #ffffff;
+    padding: 40px 0;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Hide in Night Mode */
+.night-mode .text-scroll-section {
+    display: none;
+}
+
+/* 🌟 Scrolling Text Content */
+.text-scroll-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 🔥 Animated Text Styling */
+.text-scroll-item {
+    display: flex;
+    font-size: 42px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    gap: 150px;
+    letter-spacing: 2px;
+    animation: scrollText 15s linear infinite;
+    color: #222;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🏆 Premium Text Effects */
+.text-scroll-item h3:nth-child(1) {
+    background: linear-gradient(90deg, #ff9900, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 6px rgba(255, 72, 0, 0.3);
+}
+
+.text-scroll-item h3:nth-child(2) {
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-scroll-item h3:nth-child(3) {
+    background: linear-gradient(90deg, #ff7b00, #ff3d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 6px rgba(255, 72, 0, 0.3);
+}
+
+/* 🎥 Smooth Scrolling */
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* 🚀 Touch & Hover Effects */
+.text-scroll-item.paused {
+    animation-play-state: paused;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const textScroll = document.querySelector(".text-scroll-item");
+    let isPaused = false;
+
+    // Toggle animation on touch/click
+    textScroll.addEventListener("click", function () {
+        isPaused = !isPaused;
+        textScroll.classList.toggle("paused", isPaused);
+    });
+
+    function checkDayMode() {
+        const isNightMode = document.body.classList.contains("night-mode"); 
+        
+        // Show in day mode, hide in night mode
+        document.getElementById("animated-text-scroll").style.display = isNightMode ? "none" : "block";
+    }
+
+    // Run on page load
+    checkDayMode();
+
+    // Detect night mode toggle
+    const nightModeToggle = document.querySelector("#night-mode-toggle"); 
+
+    if (nightModeToggle) {
+        nightModeToggle.addEventListener("click", function () {
+            setTimeout(checkDayMode, 100);
+        });
+    }
+});
+</script>
     
           <!-- Hero Section -->
     <section id="hero" class="hero section">
