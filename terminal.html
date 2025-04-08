@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Santhosh Terminal</title>
+  <style>
+    body {
+      background: #111;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .mac-window {
+      width: 90%;
+      max-width: 800px;
+      height: 90vh;
+      background: black;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar {
+      background: #2c2c2e;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .red { background: #ff5f56; }
+    .yellow { background: #ffbd2e; }
+    .green { background: #27c93f; }
+
+    #terminal {
+      flex-grow: 1;
+      padding: 20px;
+      color: #00ff00;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      font-size: 18px;
+    }
+
+    #input-area {
+      background: #000;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    #input-area span {
+      color: #00ff00;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    #input {
+      flex: 1;
+      background: #000;
+      color: #00ff00;
+      border: none;
+      font-size: 18px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    ::selection {
+      background: #00ff00;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="mac-window">
+    <div class="top-bar">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+    </div>
+    <div id="terminal"></div>
+    <div id="input-area">
+      <span>></span>
+      <input type="text" id="input" autocomplete="off" autofocus />
+    </div>
+  </div>
+
+  <script>
+    const terminal = document.getElementById("terminal");
+    const input = document.getElementById("input");
+    const inputArea = document.getElementById("input-area");
+
+    let stage = "startup";
+    let history = [];
+    let historyIndex = -1;
+
+    const commands = {
+      help: "Available commands: help, about, skills, projects, clear, date, time, location, contact, education",
+      about: "I'm Santhosh, an IT Professional passionate about web development and cybersecurity.",
+      skills: "HTML, CSS, JavaScript, Python, Flask, Firebase, Git, UI/UX Design",
+      projects: "Breast Cancer Prediction, Dynamic Portfolio, Hotel Bull, University Website, Prank Love Calculator",
+      clear: () => {
+        terminal.innerHTML = "";
+        return "";
+      },
+      date: () => new Date().toLocaleDateString(),
+      time: () => new Date().toLocaleTimeString(),
+      location: "Vellore, Tamil Nadu, India",
+      contact: "Email: sandy29at@gmail.com | Instagram: @sxndy.hub",
+      education: "BSc Computer Science at SSS College of Arts and Science Management, Arcot"
+    };
+
+    function printLine(text) {
+      terminal.innerHTML += text + "\n";
+      terminal.scrollTop = terminal.scrollHeight;
+    }
+
+    function promptInput(label = ">") {
+      document.querySelector("#input-area span").textContent = label;
+      input.value = "";
+      input.focus();
+    }
+
+    async function typeWriter(text, speed = 30) {
+      for (let char of text) {
+        terminal.innerHTML += char;
+        terminal.scrollTop = terminal.scrollHeight;
+        await new Promise(resolve => setTimeout(resolve, speed));
+      }
+      terminal.innerHTML += "\n";
+    }
+
+    async function startup() {
+      inputArea.style.display = "none";
+      await typeWriter("Booting up Santhosh Terminal...");
+      await typeWriter("System ready.");
+      printLine("Login Required");
+      printLine("User ID: santhosh");
+      printLine("Password: 1234\n");
+      printLine("Please type your credentials manually.\n");
+      printLine("Enter User ID:");
+      stage = "username";
+      inputArea.style.display = "flex";
+      promptInput("User ID:");
+    }
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowUp") {
+        if (history.length > 0 && historyIndex > 0) {
+          historyIndex--;
+          input.value = history[historyIndex];
+        }
+        e.preventDefault();
+      } else if (e.key === "ArrowDown") {
+        if (history.length > 0 && historyIndex < history.length - 1) {
+          historyIndex++;
+          input.value = history[historyIndex];
+        } else {
+          input.value = "";
+        }
+        e.preventDefault();
+      } else if (e.key === "Enter") {
+        const value = input.value.trim();
+        printLine("> " + value);
+
+        if (stage === "username") {
+          if (value === "santhosh") {
+            stage = "password";
+            printLine("Enter Password:");
+            promptInput("Password:");
+          } else {
+            printLine("Invalid User ID. Try again:");
+            promptInput("User ID:");
+          }
+        } else if (stage === "password") {
+          if (value === "1234") {
+            stage = "terminal";
+            printLine("Access Granted. Welcome to Santhosh Terminal.\nType 'help' to get started.");
+            promptInput(">");
+          } else {
+            printLine("Wrong Password. Try again:");
+            promptInput("Password:");
+          }
+        } else if (stage === "terminal") {
+          if (value !== "") {
+            history.push(value);
+            historyIndex = history.length;
+          }
+          handleCommand(value);
+        }
+      }
+    });
+
+    function handleCommand(cmd) {
+      if (cmd in commands) {
+        let output = typeof commands[cmd] === "function" ? commands[cmd]() : commands[cmd];
+        if (output) printLine(output);
+      } else {
+        printLine("Unknown command. Type 'help' to list commands.");
+      }
+      promptInput(">");
+    }
+
+    startup();
+  </script>
+</body>
+      </html>
