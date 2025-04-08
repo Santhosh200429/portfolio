@@ -1787,136 +1787,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
               <h2 class=>Contact Using Given Information or By Send Message</h2>
 
-
-
-<div class="profile-img" id="player">
-
-    <img src="assets/img/profile/tm2.png" alt="Profile">
-
-    <div class="catch-text">Catch Me!</div>
-
-</div>
-
-
-
-<style>
-
-    body {
-
-        background: #121212;
-
-        color: white;
-
-        text-align: center;
-
-        font-family: 'Poppins', sans-serif;
-
-        margin: 0;
-
-    }
-
-
-
-    .profile-img {
-
-        position: absolute;
-
-        width: 100px;
-
-        height: 100px;
-
-        border-radius: 50%;
-
-        transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-
-        animation: glow 1.5s infinite alternate;
-
-        cursor: pointer;
-
-    }
-
-
-
-    .profile-img img {
-
-        width: 100%;
-
-        height: 100%;
-
-        border-radius: 50%;
-
-    }
-
-
-
-    @keyframes glow {
-
-        0% { box-shadow: 0 0 10px #ff6600; }
-
-        100% { box-shadow: 0 0 25px #ff4500; }
-
-    }
-
-
-
-    .golden-glow {
-
-        box-shadow: 0 0 30px gold !important;
-
-    }
-
-</style>
-
-
-
-<script>
-
-    const player = document.getElementById("player");
-
-
-
-    function movePlayer() {
-
-        let randomX = Math.random() * (window.innerWidth - 120);
-
-        let randomY = Math.random() * (window.innerHeight - 120);
-
-
-
-        player.style.transform = `translate(${randomX}px, ${randomY}px)`;
-
-    }
-
-
-
-    player.addEventListener("click", () => {
-
-        // Apply golden aura effect
-
-        player.classList.add("golden-glow");
-
-        setTimeout(() => {
-
-            player.classList.remove("golden-glow");
-
-        }, 500); // Glow lasts 0.5 seconds
-
-
-
-        movePlayer();
-
-    });
-
-
-
-    setInterval(movePlayer, 1500); // Moves every 1.5 seconds
-
-    movePlayer();
-
-</script>
-
-                         
-
               <div class="contact-info mt-5">
 
                 <div class="info-item d-flex mb-3">
@@ -1946,8 +1816,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   <span>2 Veera Kovil Street Vellapadi, Vellore </span>
 
                 </div>
-
-
+                            <div id="map">
+            <iframe src="https://www.google.com/maps/place/Santhosh+home,+2,+Veera+Koil+St,+Kosapet,+Vellore,+Tamil+Nadu+632001/@12.9072784,79.1338563,15z/data=!4m6!3m5!1s0x3bad3900577e1ceb:0x62069d4947bbff90!8m2!3d12.9072784!4d79.1338563!16s%2Fg%2F11vzbwmm_p" width="100%" height="500px" frameborder="0" style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);" allowfullscreen=""></iframe>
+                            </div>
 
                 <a href="https://www.google.com/maps/place/Santhosh+home,+2,+Veera+Koil+St,+Kosapet,+Vellore,+Tamil+Nadu+632001/@12.9072784,79.1338563,15z/data=!4m6!3m5!1s0x3bad3900577e1ceb:0x62069d4947bbff90!8m2!3d12.9072784!4d79.1338563!16s%2Fg%2F11vzbwmm_p" class="map-link d-inline-flex align-items-center">
 
