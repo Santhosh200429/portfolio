@@ -912,7 +912,207 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </section><!-- /About Section -->
 
-    
+
+    <!-- Full Stack Tech Carousel for Portfolio -->  <section style="background: #fff; padding: 4rem 2rem; font-family: 'Poppins', sans-serif;">  
+   <style>  
+    .carousel-container {  
+      overflow: hidden;  
+      position: relative;  
+      width: 100%;  
+    }  
+  
+    .carousel-track {  
+      display: flex;  
+      animation: scroll 35s linear infinite;  
+      gap: 1.5rem;  
+      width: max-content;  
+      padding-left: 100%;  
+    }  
+  
+    @keyframes scroll {  
+      0% { transform: translateX(0); }  
+      100% { transform: translateX(-100%); }  
+    }  
+  
+    .tech-card {  
+      flex: 0 0 auto;  
+      background: rgba(255, 255, 255, 0.1);  
+      border: 1px solid #ff6b00;  
+      border-radius: 15px;  
+      text-align: center;  
+      padding: 1rem;  
+      min-width: 120px;  
+      cursor: pointer;  
+      box-shadow: 0 4px 10px rgba(255, 107, 0, 0.1);  
+      user-select: none;  
+      touch-action: manipulation;  
+    }  
+  
+    .tech-card img {  
+      width: 50px;  
+      height: 50px;  
+      margin-bottom: 0.5rem;  
+      pointer-events: none;  
+    }  
+  
+    .tech-card p {  
+      margin: 0;  
+      font-weight: bold;  
+      color: #333;  
+    }  
+  
+    .modal {  
+      position: fixed;  
+      top: 0; left: 0;  
+      width: 100%; height: 100%;  
+      background: rgba(0, 0, 0, 0.6);  
+      display: none;  
+      justify-content: center;  
+      align-items: center;  
+      z-index: 999;  
+    }  
+  
+    .modal-content {  
+      background: #fff;  
+      padding: 2rem;  
+      border-radius: 15px;  
+      max-width: 400px;  
+      width: 90%;  
+      text-align: center;  
+      position: relative;  
+    }  
+  
+    .modal-content h3 {  
+      color: #ff6b00;  
+      margin-bottom: 1rem;  
+    }  
+  
+    .modal-content p {  
+      color: #333;  
+      font-size: 0.95rem;  
+    }  
+  
+    .close {  
+      position: absolute;  
+      top: 10px; right: 15px;  
+      font-size: 1.2rem;  
+      cursor: pointer;  
+      color: #999;  
+    }  
+  
+    .close:hover {  
+      color: #ff6b00;  
+    }  
+  </style>    <div class="carousel-container">  
+    <div class="carousel-track">  
+      <!-- Loop starts -->  
+      <div class="tech-card" onclick="showDetails('HTML5', 'HTML5 is the standard markup language for creating web pages. Developed by W3C.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">  
+        <p>HTML5</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('CSS3', 'CSS3 styles HTML elements. Developed by W3C.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">  
+        <p>CSS3</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('JavaScript', 'JavaScript adds interactivity. Developed by Netscape.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">  
+        <p>JavaScript</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Bootstrap', 'Bootstrap is a UI framework. Developed by Twitter.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg">  
+        <p>Bootstrap</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('React', 'React is a frontend library for UI. Developed by Meta.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">  
+        <p>React</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Next.js', 'Next.js is a React framework for SSR. Developed by Vercel.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg">  
+        <p>Next.js</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Node.js', 'Node.js runs JavaScript on the server side.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">  
+        <p>Node.js</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Express.js', 'Express is a web framework for Node.js.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg">  
+        <p>Express</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('PHP', 'PHP is a backend scripting language.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">  
+        <p>PHP</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Python', 'Python is a general-purpose language.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">  
+        <p>Python</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Flask', 'Flask is a micro Python web framework.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg">  
+        <p>Flask</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('MySQL', 'MySQL is a relational database. Owned by Oracle.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">  
+        <p>MySQL</p>  
+      </div>  
+            <div class="tech-card" onclick="showDetails('MongoDB', 'MongoDB is a NoSQL document database.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">  
+        <p>MongoDB</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('PostgreSQL', 'PostgreSQL is an open-source SQL database.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">  
+        <p>PostgreSQL</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Firebase', 'Firebase is a platform by Google for app dev.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg">  
+        <p>Firebase</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Git', 'Git is a version control system.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">  
+        <p>Git</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('GitHub', 'GitHub hosts Git repositories.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">  
+        <p>GitHub</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('VS Code', 'Visual Studio Code is a popular code editor.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">  
+        <p>VS Code</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Postman', 'Postman is used for API testing.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg">  
+        <p>Postman</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Docker', 'Docker is a containerization platform.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">  
+        <p>Docker</p>  
+      </div>  
+      <div class="tech-card" onclick="showDetails('Vercel', 'Vercel is a platform for frontend deployment.')">  
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg">  
+        <p>Vercel</p>  
+      </div>  
+      <!-- Loop ends -->  
+    </div>  
+  </div>    <!-- Modal -->    <div class="modal" id="modal">  
+    <div class="modal-content">  
+      <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>  
+      <h3 id="techTitle">Technology Name</h3>  
+      <p id="techDesc">Technology details go here...</p>  
+    </div>  
+  </div>    <script>  
+    function showDetails(title, desc) {  
+      document.getElementById("techTitle").innerText = title;  
+      document.getElementById("techDesc").innerText = desc;  
+      document.getElementById("modal").style.display = "flex";  
+    }  
+  
+    window.onclick = function(e) {  
+      if (e.target === document.getElementById("modal")) {  
+        document.getElementById("modal").style.display = "none";  
+      }  
+    }  
+  </script>  </section>  
+  
+ 
 
     
 
