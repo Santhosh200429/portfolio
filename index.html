@@ -1,918 +1,1833 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-
-
-<head>
-
-  <meta charset="utf-8">
-
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>PORTFOLIO </title>
-
-  <meta name="description" content="">
-
-  <meta name="keywords" content="">
-
-
-
-  <!-- Favicons -->
-
-  <link href="assets/img/sandy.webp" rel="icon">
-
-  <link href="assets/img/sandy.webp" rel="apple-touch-icon">
-
-
-
-  <!-- Fonts -->
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
-
-
-
-  <!-- Vendor CSS Files -->
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-
-
-  <!-- Main CSS File -->
-
-  <link href="assets/css/main.css" rel="stylesheet">
-
-
-
-  
-
-</head>
-
-
-
-<body class="index-page">
-
-
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-
-        <h1 class="sitename">Santhosh</h1>
-
-      </a>
-
-
-
-      <nav id="navmenu" class="navmenu">
-
-        <ul>
-
-          <li><a href="#hero" class="active">Home</a></li>
-
-          <li><a href="#about">About</a></li>
-
-          <li><a href="#resume">Resume</a></li>
-
-          <li><a href="#portfolio">Portfolio</a></li>
-
-          <li><a href="#services">Services</a></li>
-
-          <li><a href="#contact">Contact</a></li>
-
-        </ul>
-
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
-      </nav>
-
-
-
-      <div class="header-social-links">
-
-        <a href="https://x.com/Sxndyhub?t=_Z3K8WbhGouBqVjmvco1pQ&s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
-
-        <a href="https://www.instagram.com/sxndy.hub?igsh=MWc3cnhoYTg0aWl6MA==" class="instagram"><i class="bi bi-instagram"></i></a>
-
-        <a href="https://www.linkedin.com/in/santhosh-u-3a785426b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
-
-      </div>
-
-
-
-    </div>
-
-  </header>
-
-
-
-  <!-- Hidden Easter egg div -->
-
-<div id="easter-egg" class="hidden-div" style="display:none;">
-
-  <div class="easter-content">
-
-    <span id="close-btn" class="close-btn">&times;</span>
-
-    <h2 class="easter-title">Congratulations!</h2>
-
-    <p class="easter-description">
-
-      You've unlocked a hidden treasure! Here's the source code for this site, feel free to explore:
-
-    </p>
-
-    <a href="https://github.com/Santhosh200429/portfolio" class="source-code-link" target="_blank">
-
-      View Source Code on GitHub
-
-    </a>
-
-    <div class="btn" onclick="window.location.reload();">Try Again</div>
-
-  </div>
-
-</div>
-
-
-
-<!-- Styles (CSS) -->
-
-<style>
-
-  /* General Styles for the Easter Egg */
-
-  #easter-egg {
-
-    display: none; /* Hidden by default */
-
-    position: fixed;
-
-    z-index: 9999;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.8); /* Darkened overlay */
-
-    padding-top: 120px;
-
-    text-align: center;
-
-    transition: opacity 0.5s ease;
-
-  }
-
-
-
-  .easter-content {
-
-    background-color: #ffffff;
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    display: inline-block;
-
-    max-width: 600px;
-
-    width: 80%;
-
-    animation: fadeIn 0.5s ease-out;
-
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-
-  }
-
-
-
-  /* Fade-In Animation for Easter Egg */
-
-  @keyframes fadeIn {
-
-    0% {
-
-      opacity: 0;
-
-      transform: translateY(-50px);
-
-    }
-
-    100% {
-
-      opacity: 1;
-
-      transform: translateY(0);
-
-    }
-
-  }
-
-
-
-  /* Close Button Styling */
-
-  .close-btn {
-
-    position: absolute;
-
-    top: 15px;
-
-    right: 15px;
-
-    font-size: 30px;
-
-    color: #888;
-
-    cursor: pointer;
-
-    transition: color 0.3s ease;
-
-  }
-
-
-
-  .close-btn:hover {
-
-    color: #333;
-
-  }
-
-
-
-  /* Title and Text Styling */
-
-  .easter-title {
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 32px;
-
-    font-weight: bold;
-
-    color: #222;
-
-    margin-bottom: 20px;
-
-    text-transform: uppercase;
-
-  }
-
-
-
-  .easter-description {
-
-    font-family: 'Roboto', sans-serif;
-
-    font-size: 18px;
-
-    color: #444;
-
-    line-height: 1.6;
-
-    margin-bottom: 25px;
-
-  }
-
-
-
-  /* Source Code Link Styling */
-
-  .source-code-link {
-
-    font-family: 'Roboto', sans-serif;
-
-    font-size: 20px;
-
-    color: #0077cc;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: color 0.3s ease;
-
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-  }
-
-
-
-  .source-code-link:hover {
-
-    color: #005fa3;
-
-  }
-
-
-
-  /* Button Styling */
-
-  .btn {
-
-    background-color: #0077cc;
-
-    color: white;
-
-    padding: 15px 35px;
-
-    border-radius: 30px;
-
-    font-size: 18px;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
-  }
-
-
-
-  .btn:hover {
-
-    background-color: #005fa3;
-
-    transform: scale(1.05);
-
-  }
-
-
-
-  /* Responsive Design for Mobile */
-
-  @media (max-width: 600px) {
-
-    .easter-content {
-
-      width: 90%;
-
-      padding: 25px;
-
-    }
-
-
-
-    .easter-title {
-
-      font-size: 26px;
-
-    }
-
-
-
-    .easter-description {
-
-      font-size: 16px;
-
-    }
-
-
-
-    .source-code-link {
-
-      font-size: 18px;
-
-    }
-
-
-
-    .btn {
-
-      font-size: 16px;
-
-      padding: 12px 28px;
-
-    }
-
-  }
-
-</style>
-
-
-
-<!-- Scripts (JavaScript) -->
-
-<script>
-
-  // Get the Easter egg and close button elements
-
-  var easterEgg = document.getElementById("easter-egg");
-
-  var closeBtn = document.getElementById("close-btn");
-
-
-
-  // Function to open Easter egg
-
-  function openEasterEgg() {
-
-    easterEgg.style.display = "block"; // Show the Easter egg
-
-    easterEgg.style.opacity = 1; // Ensure opacity transition happens
-
-  }
-
-
-
-  // Close the Easter egg when clicking the close button
-
-  closeBtn.onclick = function() {
-
-    easterEgg.style.display = "none"; // Hide the Easter egg
-
-  };
-
-
-
-  // Close the Easter egg if user clicks outside the content
-
-  window.onclick = function(event) {
-
-    if (event.target == easterEgg) {
-
-      easterEgg.style.display = "none"; // Hide the Easter egg
-
-    }
-
-  };
-
-
-
-  // Check if the URL path is "/sandy()"
-
-  if (window.location.pathname === "/sandy()") {
-
-    openEasterEgg(); // Trigger the Easter egg if the URL matches
-
-  }
-
-  // Add event listener for the "Ctrl + E" key combination
-
-  window.addEventListener('keydown', function(event) {
-
-    // Check if 'Ctrl' key is pressed along with 'E' key
-
-    if (event.ctrlKey && event.key === 'e') {
-
-      openEasterEgg(); // Trigger the Easter egg when Ctrl + E is pressed
-
-    }
-
-  });
-
-</script>
-
-
-
-  <main class="main">
-
-
-
-    <!-- Interactive Scrolling Text Section -->
-
-<section id="animated-text-scroll" class="text-scroll-section">
-
-    <div class="text-scroll-content">
-
-        <div class="text-scroll-item">
-
-            <h3>🚀 Elevate Your Digital Presence 🚀</h3>
-
-            <h3>Welcome to Santhosh's Portfolio</h3>
-
-            <h3>Innovating with Passion, Crafting with Precision</h3>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<style>
-
-/* 🌟 Premium Scrolling Text Section */
-
-.text-scroll-section {
-
-    position: relative;
-
-    width: 100%;
-
-    overflow: hidden;
-
-    white-space: nowrap;
-
-    background: #ffffff;
-
-    padding: 40px 0;
-
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
-
-    transition: all 0.3s ease-in-out;
-
-}
-
-
-
-/* ✨ Hide in Night Mode */
-
-.night-mode .text-scroll-section {
-
-    display: none;
-
-}
-
-
-
-/* 🌟 Scrolling Text Content */
-
-.text-scroll-content {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 100%;
-
-}
-
-
-
-/* 🔥 Animated Text Styling */
-
-.text-scroll-item {
-
-    display: flex;
-
-    font-size: 42px;
-
-    font-weight: 900;
-
-    font-family: 'Poppins', sans-serif;
-
-    text-transform: uppercase;
-
-    gap: 150px;
-
-    letter-spacing: 2px;
-
-    animation: scrollText 15s linear infinite;
-
-    color: #222;
-
-    transition: all 0.3s ease-in-out;
-
-    cursor: pointer;
-
-}
-
-
-
-/* 🏆 Premium Text Effects */
-
-.text-scroll-item h3:nth-child(1) {
-
-    background: linear-gradient(90deg, #ff9900, #ff4500);
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    text-shadow: 2px 2px 6px rgba(255, 72, 0, 0.3);
-
-}
-
-
-
-.text-scroll-item h3:nth-child(2) {
-
-    color: #333;
-
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-
-}
-
-
-
-.text-scroll-item h3:nth-child(3) {
-
-    background: linear-gradient(90deg, #ff7b00, #ff3d00);
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    text-shadow: 2px 2px 6px rgba(255, 72, 0, 0.3);
-
-}
-
-
-
-/* 🎥 Smooth Scrolling */
-
-@keyframes scrollText {
-
-    0% { transform: translateX(100%); }
-
-    100% { transform: translateX(-100%); }
-
-}
-
-
-
-/* 🚀 Touch & Hover Effects */
-
-.text-scroll-item.paused {
-
-    animation-play-state: paused;
-
-}
-
-</style>
-
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const textScroll = document.querySelector(".text-scroll-item");
-
-    let isPaused = false;
-
-
-
-    // Toggle animation on touch/click
-
-    textScroll.addEventListener("click", function () {
-
-        isPaused = !isPaused;
-
-        textScroll.classList.toggle("paused", isPaused);
-
-    });
-
-
-
-    function checkDayMode() {
-
-        const isNightMode = document.body.classList.contains("night-mode"); 
-
-        
-
-        // Show in day mode, hide in night mode
-
-        document.getElementById("animated-text-scroll").style.display = isNightMode ? "none" : "block";
-
-    }
-
-
-
-    // Run on page load
-
-    checkDayMode();
-
-
-
-    // Detect night mode toggle
-
-    const nightModeToggle = document.querySelector("#night-mode-toggle"); 
-
-
-
-    if (nightModeToggle) {
-
-        nightModeToggle.addEventListener("click", function () {
-
-            setTimeout(checkDayMode, 100);
-
-        });
-
-    }
-
-});
-
-</script>
-
-            
-
- <!-- About Section -->
-
-    <section id="about" class="about section light-background">
-
-
-
-      <!-- Section Title -->
-
-      <div class="container section-title" data-aos="fade-up">
-
-        <h2>About</h2>
-
-        <div class="title-shape">
-
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-
-          </svg>
-
-        </div>
-
-        <p>Welcome to my portfolio! Here, I showcase my projects, skills, and experience in web development. This website is designed to be interactive, mobile-friendly, and constantly evolving, reflecting my continuous growth as an IT professional</p>
-
-      </div><!-- End Section Title -->
-
-
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-
-
-        <div class="row align-items-center">
-
-          <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
-
-            <div class="about-image">
-
-              <img src="assets/img/profile/santhosh.jpg" alt="Profile Image" class="img-fluid rounded-4">
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-
-            <div class="about-content">
-
-              <span class="subtitle">About Me</span>
-
-                 <p class="mb-4">Passionate IT Professional | Web Development Enthusiast | Lifelong Learner</p>
-
-
-
-              <div class="personal-info">
-
-                <div class="row g-4">
-
-                  <div class="col-6">
-
-                    <div class="info-item">
-
-                      <span class="label">Name</span>
-
-                      <span class="value">Santhosh</span>
-
-                    </div>
-
-                  </div>
-
-
-
-                  <div class="col-6">
-
-                    <div class="info-item">
-
-                      <span class="label">Phone</span>
-
-                      <span class="value">+91 6369050688</span>
-
-                    </div>
-
-                  </div>
-
-
-
-                  <div class="col-6">
-
-                    <div class="info-item">
-
-                      <span class="label">Age</span>
-
-                      <span class="value">20 Years</span>
-
-                    </div>
-
-                  </div>
-
-
-
-                  <div class="col-6">
-
-                    <div class="info-item">
-
-                      <span class="label">Email</span>
-
-                      <span class="value">sandy29at@gmail.com</span>
-
-                    </div>
-
-                  </div>
-
-
-
-                  <div class="col-6">
-
-                    <div class="info-item">
-
-                      <span class="label">City</span>
-
-                      <span class="value">Vellore</span>
-
-                    </div>
-
-                  </div>
-
-
-
-                  <div class="col-6">
-
-                    <div class="info-item">
-
-                      <span class="label">Nationality</span>
-
-                      <span class="value">India</span>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-
-              <div class="signature mt-4">
-
-                <div class="signature-image">
-
-                  <img src="assets/img/misc/signature-1.webp" alt="" class="img-fluid">
-
-                </div>
-
-                <div class="signature-info">
-
-                  <h4>Santhosh</h4>
-
-                  <p>B.Sc. Computer Science </p>
-
-                </div>
-                      <li><a href="terminal.html" class="btn-visit align-self-start">Open Terminal</a></li>
-                
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-      </div>
-
-
-
-    </section><!-- /About Section -->
-
-
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+
+
+
+  <meta charset="utf-8">
+
+
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+
+  <title>PORTFOLIO </title>
+
+
+
+  <meta name="description" content="">
+
+
+
+  <meta name="keywords" content="">
+
+
+
+
+
+
+
+  <!-- Favicons -->
+
+
+
+  <link href="assets/img/sandy.webp" rel="icon">
+
+
+
+  <link href="assets/img/sandy.webp" rel="apple-touch-icon">
+
+
+
+
+
+
+
+  <!-- Fonts -->
+
+
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+
+
+
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+
+
+
+
+
+
+
+  <!-- Vendor CSS Files -->
+
+
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+
+
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+
+
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+  <!-- Main CSS File -->
+
+
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+
+
+
+
+
+  
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="index-page">
+
+
+
+
+
+
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+
+
+
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+
+
+
+
+
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+
+
+
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+
+
+
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+
+
+
+        <h1 class="sitename">Santhosh</h1>
+
+
+
+      </a>
+
+
+
+
+
+
+
+      <nav id="navmenu" class="navmenu">
+
+
+
+        <ul>
+
+
+
+          <li><a href="#hero" class="active">Home</a></li>
+
+
+
+          <li><a href="#about">About</a></li>
+
+
+
+          <li><a href="#resume">Resume</a></li>
+
+
+
+          <li><a href="#portfolio">Portfolio</a></li>
+
+
+
+          <li><a href="#services">Services</a></li>
+
+
+
+          <li><a href="#contact">Contact</a></li>
+
+
+
+        </ul>
+
+
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+
+
+      </nav>
+
+
+
+
+
+
+
+      <div class="header-social-links">
+
+
+
+        <a href="https://x.com/Sxndyhub?t=_Z3K8WbhGouBqVjmvco1pQ&s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
+
+
+
+        <a href="https://www.instagram.com/sxndy.hub?igsh=MWc3cnhoYTg0aWl6MA==" class="instagram"><i class="bi bi-instagram"></i></a>
+
+
+
+        <a href="https://www.linkedin.com/in/santhosh-u-3a785426b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </header>
+
+
+
+
+
+
+
+  <!-- Hidden Easter egg div -->
+
+
+
+<div id="easter-egg" class="hidden-div" style="display:none;">
+
+
+
+  <div class="easter-content">
+
+
+
+    <span id="close-btn" class="close-btn">&times;</span>
+
+
+
+    <h2 class="easter-title">Congratulations!</h2>
+
+
+
+    <p class="easter-description">
+
+
+
+      You've unlocked a hidden treasure! Here's the source code for this site, feel free to explore:
+
+
+
+    </p>
+
+
+
+    <a href="https://github.com/Santhosh200429/portfolio" class="source-code-link" target="_blank">
+
+
+
+      View Source Code on GitHub
+
+
+
+    </a>
+
+
+
+    <div class="btn" onclick="window.location.reload();">Try Again</div>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Styles (CSS) -->
+
+
+
+<style>
+
+
+
+  /* General Styles for the Easter Egg */
+
+
+
+  #easter-egg {
+
+
+
+    display: none; /* Hidden by default */
+
+
+
+    position: fixed;
+
+
+
+    z-index: 9999;
+
+
+
+    top: 0;
+
+
+
+    left: 0;
+
+
+
+    width: 100%;
+
+
+
+    height: 100%;
+
+
+
+    background-color: rgba(0, 0, 0, 0.8); /* Darkened overlay */
+
+
+
+    padding-top: 120px;
+
+
+
+    text-align: center;
+
+
+
+    transition: opacity 0.5s ease;
+
+
+
+  }
+
+
+
+
+
+
+
+  .easter-content {
+
+
+
+    background-color: #ffffff;
+
+
+
+    padding: 30px;
+
+
+
+    border-radius: 20px;
+
+
+
+    display: inline-block;
+
+
+
+    max-width: 600px;
+
+
+
+    width: 80%;
+
+
+
+    animation: fadeIn 0.5s ease-out;
+
+
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Fade-In Animation for Easter Egg */
+
+
+
+  @keyframes fadeIn {
+
+
+
+    0% {
+
+
+
+      opacity: 0;
+
+
+
+      transform: translateY(-50px);
+
+
+
+    }
+
+
+
+    100% {
+
+
+
+      opacity: 1;
+
+
+
+      transform: translateY(0);
+
+
+
+    }
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Close Button Styling */
+
+
+
+  .close-btn {
+
+
+
+    position: absolute;
+
+
+
+    top: 15px;
+
+
+
+    right: 15px;
+
+
+
+    font-size: 30px;
+
+
+
+    color: #888;
+
+
+
+    cursor: pointer;
+
+
+
+    transition: color 0.3s ease;
+
+
+
+  }
+
+
+
+
+
+
+
+  .close-btn:hover {
+
+
+
+    color: #333;
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Title and Text Styling */
+
+
+
+  .easter-title {
+
+
+
+    font-family: 'Poppins', sans-serif;
+
+
+
+    font-size: 32px;
+
+
+
+    font-weight: bold;
+
+
+
+    color: #222;
+
+
+
+    margin-bottom: 20px;
+
+
+
+    text-transform: uppercase;
+
+
+
+  }
+
+
+
+
+
+
+
+  .easter-description {
+
+
+
+    font-family: 'Roboto', sans-serif;
+
+
+
+    font-size: 18px;
+
+
+
+    color: #444;
+
+
+
+    line-height: 1.6;
+
+
+
+    margin-bottom: 25px;
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Source Code Link Styling */
+
+
+
+  .source-code-link {
+
+
+
+    font-family: 'Roboto', sans-serif;
+
+
+
+    font-size: 20px;
+
+
+
+    color: #0077cc;
+
+
+
+    text-decoration: none;
+
+
+
+    font-weight: bold;
+
+
+
+    transition: color 0.3s ease;
+
+
+
+    display: inline-block;
+
+
+
+    margin-bottom: 20px;
+
+
+
+  }
+
+
+
+
+
+
+
+  .source-code-link:hover {
+
+
+
+    color: #005fa3;
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Button Styling */
+
+
+
+  .btn {
+
+
+
+    background-color: #0077cc;
+
+
+
+    color: white;
+
+
+
+    padding: 15px 35px;
+
+
+
+    border-radius: 30px;
+
+
+
+    font-size: 18px;
+
+
+
+    cursor: pointer;
+
+
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+
+
+  }
+
+
+
+
+
+
+
+  .btn:hover {
+
+
+
+    background-color: #005fa3;
+
+
+
+    transform: scale(1.05);
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Responsive Design for Mobile */
+
+
+
+  @media (max-width: 600px) {
+
+
+
+    .easter-content {
+
+
+
+      width: 90%;
+
+
+
+      padding: 25px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .easter-title {
+
+
+
+      font-size: 26px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .easter-description {
+
+
+
+      font-size: 16px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .source-code-link {
+
+
+
+      font-size: 18px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .btn {
+
+
+
+      font-size: 16px;
+
+
+
+      padding: 12px 28px;
+
+
+
+    }
+
+
+
+  }
+
+
+
+</style>
+
+
+
+
+
+
+
+<!-- Scripts (JavaScript) -->
+
+
+
+<script>
+
+
+
+  // Get the Easter egg and close button elements
+
+
+
+  var easterEgg = document.getElementById("easter-egg");
+
+
+
+  var closeBtn = document.getElementById("close-btn");
+
+
+
+
+
+
+
+  // Function to open Easter egg
+
+
+
+  function openEasterEgg() {
+
+
+
+    easterEgg.style.display = "block"; // Show the Easter egg
+
+
+
+    easterEgg.style.opacity = 1; // Ensure opacity transition happens
+
+
+
+  }
+
+
+
+
+
+
+
+  // Close the Easter egg when clicking the close button
+
+
+
+  closeBtn.onclick = function() {
+
+
+
+    easterEgg.style.display = "none"; // Hide the Easter egg
+
+
+
+  };
+
+
+
+
+
+
+
+  // Close the Easter egg if user clicks outside the content
+
+
+
+  window.onclick = function(event) {
+
+
+
+    if (event.target == easterEgg) {
+
+
+
+      easterEgg.style.display = "none"; // Hide the Easter egg
+
+
+
+    }
+
+
+
+  };
+
+
+
+
+
+
+
+  // Check if the URL path is "/sandy()"
+
+
+
+  if (window.location.pathname === "/sandy()") {
+
+
+
+    openEasterEgg(); // Trigger the Easter egg if the URL matches
+
+
+
+  }
+
+
+
+  // Add event listener for the "Ctrl + E" key combination
+
+
+
+  window.addEventListener('keydown', function(event) {
+
+
+
+    // Check if 'Ctrl' key is pressed along with 'E' key
+
+
+
+    if (event.ctrlKey && event.key === 'e') {
+
+
+
+      openEasterEgg(); // Trigger the Easter egg when Ctrl + E is pressed
+
+
+
+    }
+
+
+
+  });
+
+
+
+</script>
+
+
+
+
+
+
+
+  <main class="main">
+
+
+
+
+
+
+
+    <!-- Interactive Scrolling Text Section -->
+
+
+
+<section id="animated-text-scroll" class="text-scroll-section">
+
+
+
+    <div class="text-scroll-content">
+
+
+
+        <div class="text-scroll-item">
+
+
+
+            <h3>🚀 Elevate Your Digital Presence 🚀</h3>
+
+
+
+            <h3>Welcome to Santhosh's Portfolio</h3>
+
+
+
+            <h3>Innovating with Passion, Crafting with Precision</h3>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+
+/* 🌟 Premium Scrolling Text Section */
+
+
+
+.text-scroll-section {
+
+
+
+    position: relative;
+
+
+
+    width: 100%;
+
+
+
+    overflow: hidden;
+
+
+
+    white-space: nowrap;
+
+
+
+    background: #ffffff;
+
+
+
+    padding: 40px 0;
+
+
+
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+
+
+
+    transition: all 0.3s ease-in-out;
+
+
+
+}
+
+
+
+
+
+
+
+/* ✨ Hide in Night Mode */
+
+
+
+.night-mode .text-scroll-section {
+
+
+
+    display: none;
+
+
+
+}
+
+
+
+
+
+
+
+/* 🌟 Scrolling Text Content */
+
+
+
+.text-scroll-content {
+
+
+
+    display: flex;
+
+
+
+    align-items: center;
+
+
+
+    justify-content: center;
+
+
+
+    width: 100%;
+
+
+
+}
+
+
+
+
+
+
+
+/* 🔥 Animated Text Styling */
+
+
+
+.text-scroll-item {
+
+
+
+    display: flex;
+
+
+
+    font-size: 42px;
+
+
+
+    font-weight: 900;
+
+
+
+    font-family: 'Poppins', sans-serif;
+
+
+
+    text-transform: uppercase;
+
+
+
+    gap: 150px;
+
+
+
+    letter-spacing: 2px;
+
+
+
+    animation: scrollText 15s linear infinite;
+
+
+
+    color: #222;
+
+
+
+    transition: all 0.3s ease-in-out;
+
+
+
+    cursor: pointer;
+
+
+
+}
+
+
+
+
+
+
+
+/* 🏆 Premium Text Effects */
+
+
+
+.text-scroll-item h3:nth-child(1) {
+
+
+
+    background: linear-gradient(90deg, #ff9900, #ff4500);
+
+
+
+    -webkit-background-clip: text;
+
+
+
+    -webkit-text-fill-color: transparent;
+
+
+
+    text-shadow: 2px 2px 6px rgba(255, 72, 0, 0.3);
+
+
+
+}
+
+
+
+
+
+
+
+.text-scroll-item h3:nth-child(2) {
+
+
+
+    color: #333;
+
+
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+
+
+}
+
+
+
+
+
+
+
+.text-scroll-item h3:nth-child(3) {
+
+
+
+    background: linear-gradient(90deg, #ff7b00, #ff3d00);
+
+
+
+    -webkit-background-clip: text;
+
+
+
+    -webkit-text-fill-color: transparent;
+
+
+
+    text-shadow: 2px 2px 6px rgba(255, 72, 0, 0.3);
+
+
+
+}
+
+
+
+
+
+
+
+/* 🎥 Smooth Scrolling */
+
+
+
+@keyframes scrollText {
+
+
+
+    0% { transform: translateX(100%); }
+
+
+
+    100% { transform: translateX(-100%); }
+
+
+
+}
+
+
+
+
+
+
+
+/* 🚀 Touch & Hover Effects */
+
+
+
+.text-scroll-item.paused {
+
+
+
+    animation-play-state: paused;
+
+
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+<script>
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+    const textScroll = document.querySelector(".text-scroll-item");
+
+
+
+    let isPaused = false;
+
+
+
+
+
+
+
+    // Toggle animation on touch/click
+
+
+
+    textScroll.addEventListener("click", function () {
+
+
+
+        isPaused = !isPaused;
+
+
+
+        textScroll.classList.toggle("paused", isPaused);
+
+
+
+    });
+
+
+
+
+
+
+
+    function checkDayMode() {
+
+
+
+        const isNightMode = document.body.classList.contains("night-mode"); 
+
+
+
+        
+
+
+
+        // Show in day mode, hide in night mode
+
+
+
+        document.getElementById("animated-text-scroll").style.display = isNightMode ? "none" : "block";
+
+
+
+    }
+
+
+
+
+
+
+
+    // Run on page load
+
+
+
+    checkDayMode();
+
+
+
+
+
+
+
+    // Detect night mode toggle
+
+
+
+    const nightModeToggle = document.querySelector("#night-mode-toggle"); 
+
+
+
+
+
+
+
+    if (nightModeToggle) {
+
+
+
+        nightModeToggle.addEventListener("click", function () {
+
+
+
+            setTimeout(checkDayMode, 100);
+
+
+
+        });
+
+
+
+    }
+
+
+
+});
+
+
+
+</script>
+
+
+
+            
+
+
+
+ <!-- About Section -->
+
+
+
+    <section id="about" class="about section light-background">
+
+
+
+
+
+
+
+      <!-- Section Title -->
+
+
+
+      <div class="container section-title" data-aos="fade-up">
+
+
+
+        <h2>About</h2>
+
+
+
+        <div class="title-shape">
+
+
+
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+
+
+
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+
+
+
+          </svg>
+
+
+
+        </div>
+
+
+
+        <p>Welcome to my portfolio! Here, I showcase my projects, skills, and experience in web development. This website is designed to be interactive, mobile-friendly, and constantly evolving, reflecting my continuous growth as an IT professional</p>
+
+
+
+      </div><!-- End Section Title -->
+
+
+
+
+
+
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+
+
+
+
+
+        <div class="row align-items-center">
+
+
+
+          <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+
+
+
+            <div class="about-image">
+
+
+
+              <img src="assets/img/profile/santhosh.jpg" alt="Profile Image" class="img-fluid rounded-4">
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+
+
+
+            <div class="about-content">
+
+
+
+              <span class="subtitle">About Me</span>
+
+
+
+                 <p class="mb-4">Passionate IT Professional | Web Development Enthusiast | Lifelong Learner</p>
+
+
+
+
+
+
+
+              <div class="personal-info">
+
+
+
+                <div class="row g-4">
+
+
+
+                  <div class="col-6">
+
+
+
+                    <div class="info-item">
+
+
+
+                      <span class="label">Name</span>
+
+
+
+                      <span class="value">Santhosh</span>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+
+
+
+
+                  <div class="col-6">
+
+
+
+                    <div class="info-item">
+
+
+
+                      <span class="label">Phone</span>
+
+
+
+                      <span class="value">+91 6369050688</span>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+
+
+
+
+                  <div class="col-6">
+
+
+
+                    <div class="info-item">
+
+
+
+                      <span class="label">Age</span>
+
+
+
+                      <span class="value">20 Years</span>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+
+
+
+
+                  <div class="col-6">
+
+
+
+                    <div class="info-item">
+
+
+
+                      <span class="label">Email</span>
+
+
+
+                      <span class="value">sandy29at@gmail.com</span>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+
+
+
+
+                  <div class="col-6">
+
+
+
+                    <div class="info-item">
+
+
+
+                      <span class="label">City</span>
+
+
+
+                      <span class="value">Vellore</span>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+
+
+
+
+                  <div class="col-6">
+
+
+
+                    <div class="info-item">
+
+
+
+                      <span class="label">Nationality</span>
+
+
+
+                      <span class="value">India</span>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+
+
+
+
+              <div class="signature mt-4">
+
+
+
+                <div class="signature-image">
+
+
+
+                  <img src="assets/img/misc/signature-1.webp" alt="" class="img-fluid">
+
+
+
+                </div>
+
+
+
+                <div class="signature-info">
+
+
+
+                  <h4>Santhosh</h4>
+
+
+
+                  <p>B.Sc. Computer Science </p>
+
+
+
+                </div>
+
+                      <li><a href="terminal.html" class="btn-visit align-self-start">Open Terminal</a></li>
+
+                
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </section><!-- /About Section -->
+
+
+
+
+
 <!-- Full Stack Tech Carousel for Portfolio -->
 <section style="background: #fff; padding: 4rem 2rem; font-family: 'Poppins', sans-serif;">
 
@@ -1112,895 +2027,1999 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   </script>
 </section>
-  
-    <!-- Resume Section -->
-
-    <section id="resume" class="resume section">
-
-
-
-      <!-- Section Title -->
-
-      <div class="container section-title" data-aos="fade-up">
-
-        <h2>Resume</h2>
-
-        <div class="title-shape">
-
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-
-          </svg>
-
-        </div>
-
-         <p>I am Santhosh, a passionate IT professional with a strong academic background, currently pursuing a Bachelor of Science. Actively seeking opportunities in the tech industry, I am driven by a deep interest in web development and problem-solving. With strong adaptability and teamwork skills, I am eager to apply my knowledge to real-world projects.</p>
-
-
-
-<p>Beyond technology, I have diverse interests. I am a passionate football enthusiast who enjoys both watching the sport and following professional leagues. Additionally, I have a deep love for driving, especially in hill stations, as it allows me to refine my skills and experience new adventures.</p>
-
-
-
-<p>Combining technical expertise, continuous learning, and a drive for professional growth, I am committed to making meaningful contributions to any team or project I join.</p>
-
-      </div><!-- End Section Title -->
-
-       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-  <div class="row">
-
-    <div class="col-12">
-
-      <div class="resume-wrapper">
-
-        <div class="resume-block" data-aos="fade-up">            
-
-          <h2 class="section-title">My Education</h2>
-
-
-
-
-
-          <div class="timeline">
-
-            <!-- Bachelor's Degree -->
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="timeline-left">
-
-                <h4 class="institution">S.S.S College of Arts and Science, Arcot</h4>
-
-                <span class="period">2022 - 2025</span>
-
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-right">
-
-                <h3 class="degree">Bachelor of Science in Computer Science</h3>
-
-                <p class="description">
-
-                  Currently pursuing a degree in computer science with a focus on programming, software engineering, web development, and cybersecurity. 
-
-                  Developing practical skills in Python, PHP, Flask, Next.js, MySQL, and Firebase through real-world projects.
-
-                </p>
-
-              </div>
-
-            </div>
-
-
-
-            <!-- Higher Secondary Education (HSC) -->
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-
-              <div class="timeline-left">
-
-                <h4 class="institution">Desia Matriculation Higher Secondary School, Vellore</h4>
-
-                <span class="period">2020 - 2022</span>
-
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-right">
-
-                <h3 class="degree">Higher Secondary Education (HSC) - Computer Science</h3>
-
-                <p class="description">
-
-                  Focused on fundamental programming concepts, algorithms, and database management. 
-
-                  Developed strong analytical and problem-solving skills while gaining exposure to coding and logical reasoning.
-
-                </p>
-
-              </div>
-
-            </div>
-
-
-
-            <!-- Secondary School Education (SSLC) -->
-
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-
-              <div class="timeline-left">
-
-                <h4 class="institution">Desia Matriculation Higher Secondary School, Vellore</h4>
-
-                <span class="period">2019 - 2020</span>
-
-              </div>
-
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-right">
-
-                <h3 class="degree">Secondary School Leaving Certificate (SSLC)</h3>
-
-                <p class="description">
-
-                  Built a strong foundation in mathematics, logical reasoning, and scientific concepts. 
-
-                  Actively participated in academic and extracurricular activities that enhanced my problem-solving abilities.
-
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  </div>
-
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-      </div>
-
-
-
-    </section><!-- /Resume Section -->
-
-
-
-
-
-      </div>
-
-
-
-    </section><!-- /Resume Section -->
-
-
-
-    <!-- Portfolio Section -->
-
-    <section id="portfolio" class="portfolio section">
-
-
-
-      <!-- Section Title -->
-
-      <div class="container section-title" data-aos="fade-up">
-
-        <h2>Portfolio</h2>
-
-        <div class="title-shape">
-
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-
-          </svg>
-
-        </div>
-
-        <p>A portfolio is a collection of work that showcases My skills and projects</p>
-
-      </div><!-- End Section Title -->
-
-
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-
-
-          <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
-
-            <ul class="portfolio-filters isotope-filters">
-
-              <li data-filter="*" class="filter-active">All Work</li>
-
-              <li data-filter=".filter-web">Web Development</li>
-
-              <li data-filter=".filter-webapp">Web Application</li>
-
-              <li data-filter=".filter-medical">Machine learning</li>
-
-              <li data-filter=".filter-uiux">UI/UX Design</li>
-
-            </ul>
-
-          </div>
-
-
-
-          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-uiux">
-
-              <div class="portfolio-card">
-
-                <div class="portfolio-image">
-
-                  <img src="assets/img/portfolio/digital-agency-1.jpg" class="img-fluid" alt="" loading="lazy">
-
-                  <div class="portfolio-overlay">
-
-                    <div class="portfolio-actions">
-
-                      <a href="assets/img/portfolio/digital-agency-1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-
-                      <a href="digital-agency.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="portfolio-content">
-
-                  <span class="category">UI/UX Design</span>
-
-                  <h3>Digital Agency</h3>
-
-                  <p>Digital Agency specializes in professional web development and UI/UX design, delivering high-quality digital solutions for businesses and individuals.</p>
-
-                </div>
-
-              </div>
-
-            </div><!-- End Portfolio Item -->
-
-<div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-  <div class="portfolio-card">
-    <div class="portfolio-image">
-      <img src="assets/img/portfolio/3d-portfolio1.webp" class="img-fluid" alt="" loading="lazy">
-      <div class="portfolio-overlay">
-        <div class="portfolio-actions">
-          <a href="assets/img/portfolio/sxndyhub-preview.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion">
-            <i class="bi bi-eye"></i>
-          </a>
-          <a href="3d-portfolio.html" class="details-link">
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-content">
-      <span class="category">Web Development</span>
-      <h3>3D Portfolio</h3>
-      <p>3D portfolio is a multi-featured web application with an advanced UI/UX, seamless animations, and a dynamic user experience.</p>
-    </div>
-  </div>
-</div><!-- End Portfolio Item -->
-
-            	
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-medical">
-
-              <div class="portfolio-card">
-
-                <div class="portfolio-image">
-
-                  <img src="assets/img/portfolio/breast-cancer.webp" class="img-fluid" alt="" loading="lazy">
-
-                  <div class="portfolio-overlay">
-
-                    <div class="portfolio-actions">
-
-                      <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-
-                      <a href="brst-cancer.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="portfolio-content">
-
-                  <span class="category">Medical Diagnosis</span>
-
-                  <h3>Breast Cancer Prediction </h3>
-
-                  <p>Breast cancer occurs when abnormal breast cells grow uncontrollably, forming a tumor.
-
-
-
-</p>
-
-                </div>
-
-              </div>
-
-            </div><!-- End Portfolio Item -->
-
-            	
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-webapp">
-
-              <div class="portfolio-card">
-
-                <div class="portfolio-image">
-
-                  <img src="assets/img/portfolio/home-todo.jpg" class="img-fluid" alt="" loading="lazy">
-
-                  <div class="portfolio-overlay">
-
-                    <div class="portfolio-actions">
-
-                      <a href="assets/img/portfolio/digital-agency-1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-
-                      <a href="todo.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="portfolio-content">
-
-                  <span class="category">Web Application</span>
-
-                  <h3>TODO List</h3>
-
-                  <p>A full-stack TODO List web application built using the MERN stack, featuring task management, CRUD operations, and user authentication.</p>
-
-                </div>
-
-              </div>
-
-            </div><!-- End Portfolio Item -->
-
-            	
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-
-              <div class="portfolio-card">
-
-                <div class="portfolio-image">
-
-                  <img src="assets/img/portfolio/ecommerce.webp" class="img-fluid" alt="" loading="lazy">
-
-                  <div class="portfolio-overlay">
-
-                    <div class="portfolio-actions">
-
-                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
-
-                      <a href="e-commerce.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="portfolio-content">
-
-                  <span class="category">Web Design</span>
-
-                  <h3>E-Commerce Platform </h3>
-
-                  <p>E-commerce is the buying and selling of goods or services online.
-
-
-
-</p>
-
-                </div>
-
-              </div>
-
-            </div><!-- End Portfolio Item -->
-
-
-
-                        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-
-  <div class="portfolio-card">
-
-    <div class="portfolio-image">
-
-      <img src="assets/img/portfolio/timetable.gif" class="img-fluid" alt="" loading="lazy">
-
-      <div class="portfolio-overlay">
-
-        <div class="portfolio-actions">
-
-          <a href="assets/img/portfolio/timetable-preview.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
-
-          <a href="timetable.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="portfolio-content">
-
-      <span class="category">Web Development</span>
-
-      <h3>Timetable Generator</h3>
-
-      <p>An automated scheduling system that generates conflict-free timetables for institutions.</p>
-
-    </div>
-
-  </div>
-
-</div><!-- End Portfolio Item -->
-
-
-
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-
-              <div class="portfolio-card">
-
-                <div class="portfolio-image">
-
-                  <img src="assets/img/portfolio/fake-tube-1.jpg" class="img-fluid" alt="" loading="lazy">
-
-                  <div class="portfolio-overlay">
-
-                    <div class="portfolio-actions">
-
-                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
-
-                      <a href="fake-tube.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="portfolio-content">
-
-                  <span class="category">Web Design</span>
-
-                  <h3>FakeTube</h3>
-
-                  <p>Fake Tube is a YouTube-inspired web project with a modern UI, smooth animations, and a responsive video display layout.
-
-</p>
-
-                </div>
-
-              </div>
-
-            </div><!-- End Portfolio Item -->
-
-            	
-
-          </div><!-- End Portfolio Container -->
-
-
-
-        </div>
-
-
-
-      </div>
-
-
-
-    </section><!-- /Portfolio Section -->
-
-
-
-    <!-- Services Section -->
-
-<section id="services" class="services section">
-
-
-
-    <!-- Section Title -->
-
-    <div class="container section-title" data-aos="fade-up">
-
-        <h2>My Services</h2>
-
-        <div class="title-shape">
-
-            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-
-                <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-
-            </svg>
-
-        </div>
-
-    </div>
-
-    <!-- End Section Title -->
-
-
-
-    <!-- Parallax Background -->
-
-    <div class="parallax"></div>
-
-
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-
-            
-
-            <!-- Introduction Section -->
-
-            <div class="col-lg-4 mb-5 mb-lg-0">
-
-                <h2 class="fw-bold mb-4 services-title">Bringing Your Ideas to Life</h2>
-
-                <p class="mb-4">
-
-                    As a dedicated web developer and UI/UX designer, I transform concepts into seamless digital experiences. Whether you're looking for a professional website, an intuitive design, or secure web applications, I deliver top-tier solutions tailored to your needs.
-
-                </p>
-
-                <a href="https://digital-agency-kh5g.onrender.com/contact.html" class="bn bn-outline-primary">Let's Work Together</a>
-
-            </div>
-
-            <!-- End Introduction Section -->
-
-
-
-            <div class="col-lg-8">
-
-                <div class="row g-4">
-
-
-
-                    <!-- Web Development -->
-
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-
-                        <div class="service-item text-center">
-
-                            <i class="bi bi-code-slash icon"></i>
-
-                            <h3><a href="service-details.html">Web Development</a></h3>
-
-                            <p>Crafting high-performance, fully responsive websites that are optimized for speed, SEO, and user engagement.</p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- End Web Development -->
-
-
-
-                    <!-- UI/UX Design -->
-
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-
-                        <div class="service-item text-center">
-
-                            <i class="bi bi-brush icon"></i>
-
-                            <h3><a href="service-details.html">UI/UX Design</a></h3>
-
-                            <p>Designing intuitive, visually stunning interfaces that enhance user experience and drive engagement.</p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- End UI/UX Design -->
-
-
-
-                    <!-- Full-Stack Development -->
-
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-
-                        <div class="service-item text-center">
-
-                            <i class="bi bi-layers icon"></i>
-
-                            <h3><a href="service-details.html">Full-Stack Development</a></h3>
-
-                            <p>Building dynamic web applications with powerful front-end and back-end integration for a seamless digital experience.</p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- End Full-Stack Development -->
-
-
-
-                    
-
-    <!-- Contact Section -->
-
-    <section id="contact" class="contact section light-background">
-
-
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-
-
-        <div class="row g-5">
-
-          <div class="col-lg-6">
-
-            <div class="content" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="section-category mb-3">Contact</div>
-
-              <h2 class=>Contact Using Given Information or By Send Message</h2>
-
-              <div class="contact-info mt-5">
-
-                <div class="info-item d-flex mb-3">
-
-                  <i class="bi bi-envelope-at me-3"></i>
-
-                  <span>sandy29at@gmail.com</span>
-
-                </div>
-
-
-
-                <div class="info-item d-flex mb-3">
-
-                  <i class="bi bi-telephone me-3"></i>
-
-                  <span>+91 6369050688</span>
-
-                </div>
-
-
-
-                <div class="info-item d-flex mb-4">
-
-                  <i class="bi bi-geo-alt me-3"></i>
-
-                  <span>2 Veera Kovil Street Vellapadi, Vellore </span>
-
-                </div>
-                <div id="map" style="margin-top: 20px;">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.1222608751264!2d79.13166737590017!3d12.90727838740608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3900577e1ceb%3A0x62069d4947bbff90!2sSanthosh%20home%2C%202%2C%20Veera%20Koil%20St%2C%20Kosapet%2C%20Vellore%2C%20Tamil%20Nadu%20632001!5e0!3m2!1sen!2sin!4v1712565690812!5m2!1sen!2sin" 
-    width="100%" 
-    height="500" 
-    style="border:0; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.15);" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-                </div>
-
-                <a href="https://www.google.com/maps/place/Santhosh+home,+2,+Veera+Koil+St,+Kosapet,+Vellore,+Tamil+Nadu+632001/@12.9072784,79.1338563,15z/data=!4m6!3m5!1s0x3bad3900577e1ceb:0x62069d4947bbff90!8m2!3d12.9072784!4d79.1338563!16s%2Fg%2F11vzbwmm_p" class="map-link d-inline-flex align-items-center">
-
-                  Open Map
-
-                  <i class="bi bi-arrow-right ms-2"></i>
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          
-
-          <div class="col-lg-6">
-
-            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
-
-              <div class="card-body p-4 p-lg-5">
-
-
-
-                <form action="https://formspree.io/f/mgvogkkg" method="POST">
-
-                  <div class="row gy-4">
-
-
-
-                    <div class="col-12">
-
-                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-
-                    </div>
-
-
-
-                    <div class="col-12 ">
-
-                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-
-                    </div>
-
-
-
-                    <div class="col-12">
-
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-
-                    </div>
-
-
-
-                    <div class="col-12">
-
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-
-                    </div>
-
-
-
-                   
-
-                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
-
-                    </div>
-
-
-
-                  </div>
-
-                </form>
-
-
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-        </div>
-
-
-
-      </div>
-
-
-
-    </section><!-- /Contact Section -->
-
-    
-
-
-
-  </main>
-
-
-
-  <footer id="footer" class="footer">
-
-
-
-    <div class="container">
-
-      <div class="copyright text-center ">
-
-        <p>© <span>Copyright</span><strong class="px-1 sitename">Santhosh</strong> <span>All Rights Reserved</span></p>
-
-      </div>
-
-      <div class="social-links d-flex justify-content-center">
-
-        <a href="https://x.com/Sxndyhub?t=_Z3K8WbhGouBqVjmvco1pQ&s=09"><i class="bi bi-twitter-x"></i></a>
-
-        
-
-        <a href="https://www.instagram.com/sxndy.hub?igsh=MWc3cnhoYTg0aWl6MA=="><i class="bi bi-instagram"></i></a>
-
-        <a href="https://www.linkedin.com/in/santhosh-u-3a785426b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
-
-      </div>
-
-      <div class="credits">
-
-        
-
-        Designed by <a href="#">Santhosh</a>
-
-      </div>
-
-    </div>
-
-
-
-  </footer>
-
-
-
-  <!-- Scroll Top -->
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-
-  <!-- Vendor JS Files -->
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <script src="assets/vendor/aos/aos.js"></script>
-
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-
-
-  <!-- Main JS File -->
-
-  <script src="assets/js/main.js"></script>
-
-
-
-</body>
-
-
-
+  
+
+    <!-- Resume Section -->
+
+
+
+    <section id="resume" class="resume section">
+
+
+
+
+
+
+
+      <!-- Section Title -->
+
+
+
+      <div class="container section-title" data-aos="fade-up">
+
+
+
+        <h2>Resume</h2>
+
+
+
+        <div class="title-shape">
+
+
+
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+
+
+
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+
+
+
+          </svg>
+
+
+
+        </div>
+
+
+
+         <p>I am Santhosh, a passionate IT professional with a strong academic background, currently pursuing a Bachelor of Science. Actively seeking opportunities in the tech industry, I am driven by a deep interest in web development and problem-solving. With strong adaptability and teamwork skills, I am eager to apply my knowledge to real-world projects.</p>
+
+
+
+
+
+
+
+<p>Beyond technology, I have diverse interests. I am a passionate football enthusiast who enjoys both watching the sport and following professional leagues. Additionally, I have a deep love for driving, especially in hill stations, as it allows me to refine my skills and experience new adventures.</p>
+
+
+
+
+
+
+
+<p>Combining technical expertise, continuous learning, and a drive for professional growth, I am committed to making meaningful contributions to any team or project I join.</p>
+
+
+
+      </div><!-- End Section Title -->
+
+
+
+       <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+
+  <div class="row">
+
+
+
+    <div class="col-12">
+
+
+
+      <div class="resume-wrapper">
+
+
+
+        <div class="resume-block" data-aos="fade-up">            
+
+
+
+          <h2 class="section-title">My Education</h2>
+
+
+
+
+
+
+
+
+
+
+
+          <div class="timeline">
+
+
+
+            <!-- Bachelor's Degree -->
+
+
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+
+
+
+              <div class="timeline-left">
+
+
+
+                <h4 class="institution">S.S.S College of Arts and Science, Arcot</h4>
+
+
+
+                <span class="period">2022 - 2025</span>
+
+
+
+              </div>
+
+
+
+              <div class="timeline-dot"></div>
+
+
+
+              <div class="timeline-right">
+
+
+
+                <h3 class="degree">Bachelor of Science in Computer Science</h3>
+
+
+
+                <p class="description">
+
+
+
+                  Currently pursuing a degree in computer science with a focus on programming, software engineering, web development, and cybersecurity. 
+
+
+
+                  Developing practical skills in Python, PHP, Flask, Next.js, MySQL, and Firebase through real-world projects.
+
+
+
+                </p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Higher Secondary Education (HSC) -->
+
+
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+
+
+
+              <div class="timeline-left">
+
+
+
+                <h4 class="institution">Desia Matriculation Higher Secondary School, Vellore</h4>
+
+
+
+                <span class="period">2020 - 2022</span>
+
+
+
+              </div>
+
+
+
+              <div class="timeline-dot"></div>
+
+
+
+              <div class="timeline-right">
+
+
+
+                <h3 class="degree">Higher Secondary Education (HSC) - Computer Science</h3>
+
+
+
+                <p class="description">
+
+
+
+                  Focused on fundamental programming concepts, algorithms, and database management. 
+
+
+
+                  Developed strong analytical and problem-solving skills while gaining exposure to coding and logical reasoning.
+
+
+
+                </p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Secondary School Education (SSLC) -->
+
+
+
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+
+
+
+              <div class="timeline-left">
+
+
+
+                <h4 class="institution">Desia Matriculation Higher Secondary School, Vellore</h4>
+
+
+
+                <span class="period">2019 - 2020</span>
+
+
+
+              </div>
+
+
+
+              <div class="timeline-dot"></div>
+
+
+
+              <div class="timeline-right">
+
+
+
+                <h3 class="degree">Secondary School Leaving Certificate (SSLC)</h3>
+
+
+
+                <p class="description">
+
+
+
+                  Built a strong foundation in mathematics, logical reasoning, and scientific concepts. 
+
+
+
+                  Actively participated in academic and extracurricular activities that enhanced my problem-solving abilities.
+
+
+
+                </p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </section><!-- /Resume Section -->
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </section><!-- /Resume Section -->
+
+
+
+
+
+
+
+    <!-- Portfolio Section -->
+
+
+
+    <section id="portfolio" class="portfolio section">
+
+
+
+
+
+
+
+      <!-- Section Title -->
+
+
+
+      <div class="container section-title" data-aos="fade-up">
+
+
+
+        <h2>Portfolio</h2>
+
+
+
+        <div class="title-shape">
+
+
+
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+
+
+
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+
+
+
+          </svg>
+
+
+
+        </div>
+
+
+
+        <p>A portfolio is a collection of work that showcases My skills and projects</p>
+
+
+
+      </div><!-- End Section Title -->
+
+
+
+
+
+
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+
+
+
+
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+
+
+
+
+
+
+          <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
+
+
+
+            <ul class="portfolio-filters isotope-filters">
+
+
+
+              <li data-filter="*" class="filter-active">All Work</li>
+
+
+
+              <li data-filter=".filter-web">Web Development</li>
+
+
+
+              <li data-filter=".filter-webapp">Web Application</li>
+
+
+
+              <li data-filter=".filter-medical">Machine learning</li>
+
+
+
+              <li data-filter=".filter-uiux">UI/UX Design</li>
+
+
+
+            </ul>
+
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+
+
+
+
+
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-uiux">
+
+
+
+              <div class="portfolio-card">
+
+
+
+                <div class="portfolio-image">
+
+
+
+                  <img src="assets/img/portfolio/digital-agency-1.jpg" class="img-fluid" alt="" loading="lazy">
+
+
+
+                  <div class="portfolio-overlay">
+
+
+
+                    <div class="portfolio-actions">
+
+
+
+                      <a href="assets/img/portfolio/digital-agency-1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
+
+
+
+                      <a href="digital-agency.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+                <div class="portfolio-content">
+
+
+
+                  <span class="category">UI/UX Design</span>
+
+
+
+                  <h3>Digital Agency</h3>
+
+
+
+                  <p>Digital Agency specializes in professional web development and UI/UX design, delivering high-quality digital solutions for businesses and individuals.</p>
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+            </div><!-- End Portfolio Item -->
+
+
+
+<div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+
+  <div class="portfolio-card">
+
+    <div class="portfolio-image">
+
+      <img src="assets/img/portfolio/3d-portfolio1.webp" class="img-fluid" alt="" loading="lazy">
+
+      <div class="portfolio-overlay">
+
+        <div class="portfolio-actions">
+
+          <a href="assets/img/portfolio/sxndyhub-preview.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion">
+
+            <i class="bi bi-eye"></i>
+
+          </a>
+
+          <a href="3d-portfolio.html" class="details-link">
+
+            <i class="bi bi-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="portfolio-content">
+
+      <span class="category">Web Development</span>
+
+      <h3>3D Portfolio</h3>
+
+      <p>3D portfolio is a multi-featured web application with an advanced UI/UX, seamless animations, and a dynamic user experience.</p>
+
+    </div>
+
+  </div>
+
+</div><!-- End Portfolio Item -->
+
+
+
+            	
+
+
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-medical">
+
+
+
+              <div class="portfolio-card">
+
+
+
+                <div class="portfolio-image">
+
+
+
+                  <img src="assets/img/portfolio/breast-cancer.webp" class="img-fluid" alt="" loading="lazy">
+
+
+
+                  <div class="portfolio-overlay">
+
+
+
+                    <div class="portfolio-actions">
+
+
+
+                      <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
+
+
+
+                      <a href="brst-cancer.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+                <div class="portfolio-content">
+
+
+
+                  <span class="category">Medical Diagnosis</span>
+
+
+
+                  <h3>Breast Cancer Prediction </h3>
+
+
+
+                  <p>Breast cancer occurs when abnormal breast cells grow uncontrollably, forming a tumor.
+
+
+
+
+
+
+
+</p>
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+            </div><!-- End Portfolio Item -->
+
+
+
+            	
+
+
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-webapp">
+
+
+
+              <div class="portfolio-card">
+
+
+
+                <div class="portfolio-image">
+
+
+
+                  <img src="assets/img/portfolio/home-todo.jpg" class="img-fluid" alt="" loading="lazy">
+
+
+
+                  <div class="portfolio-overlay">
+
+
+
+                    <div class="portfolio-actions">
+
+
+
+                      <a href="assets/img/portfolio/digital-agency-1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
+
+
+
+                      <a href="todo.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+                <div class="portfolio-content">
+
+
+
+                  <span class="category">Web Application</span>
+
+
+
+                  <h3>TODO List</h3>
+
+
+
+                  <p>A full-stack TODO List web application built using the MERN stack, featuring task management, CRUD operations, and user authentication.</p>
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+            </div><!-- End Portfolio Item -->
+
+
+
+            	
+
+
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+
+
+
+              <div class="portfolio-card">
+
+
+
+                <div class="portfolio-image">
+
+
+
+                  <img src="assets/img/portfolio/ecommerce.webp" class="img-fluid" alt="" loading="lazy">
+
+
+
+                  <div class="portfolio-overlay">
+
+
+
+                    <div class="portfolio-actions">
+
+
+
+                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
+
+
+
+                      <a href="e-commerce.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+                <div class="portfolio-content">
+
+
+
+                  <span class="category">Web Design</span>
+
+
+
+                  <h3>E-Commerce Platform </h3>
+
+
+
+                  <p>E-commerce is the buying and selling of goods or services online.
+
+
+
+
+
+
+
+</p>
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+            </div><!-- End Portfolio Item -->
+
+
+
+
+
+
+
+                        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+
+
+
+  <div class="portfolio-card">
+
+
+
+    <div class="portfolio-image">
+
+
+
+      <img src="assets/img/portfolio/timetable.gif" class="img-fluid" alt="" loading="lazy">
+
+
+
+      <div class="portfolio-overlay">
+
+
+
+        <div class="portfolio-actions">
+
+
+
+          <a href="assets/img/portfolio/timetable-preview.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
+
+
+
+          <a href="timetable.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="portfolio-content">
+
+
+
+      <span class="category">Web Development</span>
+
+
+
+      <h3>Timetable Generator</h3>
+
+
+
+      <p>An automated scheduling system that generates conflict-free timetables for institutions.</p>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+</div><!-- End Portfolio Item -->
+
+
+
+
+
+
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+
+
+
+              <div class="portfolio-card">
+
+
+
+                <div class="portfolio-image">
+
+
+
+                  <img src="assets/img/portfolio/fake-tube-1.jpg" class="img-fluid" alt="" loading="lazy">
+
+
+
+                  <div class="portfolio-overlay">
+
+
+
+                    <div class="portfolio-actions">
+
+
+
+                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
+
+
+
+                      <a href="fake-tube.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+
+
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+
+
+
+                <div class="portfolio-content">
+
+
+
+                  <span class="category">Web Design</span>
+
+
+
+                  <h3>FakeTube</h3>
+
+
+
+                  <p>Fake Tube is a YouTube-inspired web project with a modern UI, smooth animations, and a responsive video display layout.
+
+
+
+</p>
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+            </div><!-- End Portfolio Item -->
+
+
+
+            	
+
+
+
+          </div><!-- End Portfolio Container -->
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </section><!-- /Portfolio Section -->
+
+
+
+
+
+
+
+    <!-- Services Section -->
+
+
+
+<section id="services" class="services section">
+
+
+
+
+
+
+
+    <!-- Section Title -->
+
+
+
+    <div class="container section-title" data-aos="fade-up">
+
+
+
+        <h2>My Services</h2>
+
+
+
+        <div class="title-shape">
+
+
+
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+
+
+
+                <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+
+
+
+            </svg>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- End Section Title -->
+
+
+
+
+
+
+
+    <!-- Parallax Background -->
+
+
+
+    <div class="parallax"></div>
+
+
+
+
+
+
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+
+        <div class="row align-items-center">
+
+
+
+            
+
+
+
+            <!-- Introduction Section -->
+
+
+
+            <div class="col-lg-4 mb-5 mb-lg-0">
+
+
+
+                <h2 class="fw-bold mb-4 services-title">Bringing Your Ideas to Life</h2>
+
+
+
+                <p class="mb-4">
+
+
+
+                    As a dedicated web developer and UI/UX designer, I transform concepts into seamless digital experiences. Whether you're looking for a professional website, an intuitive design, or secure web applications, I deliver top-tier solutions tailored to your needs.
+
+
+
+                </p>
+
+
+
+                <a href="https://digital-agency-kh5g.onrender.com/contact.html" class="bn bn-outline-primary">Let's Work Together</a>
+
+
+
+            </div>
+
+
+
+            <!-- End Introduction Section -->
+
+
+
+
+
+
+
+            <div class="col-lg-8">
+
+
+
+                <div class="row g-4">
+
+
+
+
+
+
+
+                    <!-- Web Development -->
+
+
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+
+
+                        <div class="service-item text-center">
+
+
+
+                            <i class="bi bi-code-slash icon"></i>
+
+
+
+                            <h3><a href="service-details.html">Web Development</a></h3>
+
+
+
+                            <p>Crafting high-performance, fully responsive websites that are optimized for speed, SEO, and user engagement.</p>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <!-- End Web Development -->
+
+
+
+
+
+
+
+                    <!-- UI/UX Design -->
+
+
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+
+
+
+                        <div class="service-item text-center">
+
+
+
+                            <i class="bi bi-brush icon"></i>
+
+
+
+                            <h3><a href="service-details.html">UI/UX Design</a></h3>
+
+
+
+                            <p>Designing intuitive, visually stunning interfaces that enhance user experience and drive engagement.</p>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <!-- End UI/UX Design -->
+
+
+
+
+
+
+
+                    <!-- Full-Stack Development -->
+
+
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+
+
+
+                        <div class="service-item text-center">
+
+
+
+                            <i class="bi bi-layers icon"></i>
+
+
+
+                            <h3><a href="service-details.html">Full-Stack Development</a></h3>
+
+
+
+                            <p>Building dynamic web applications with powerful front-end and back-end integration for a seamless digital experience.</p>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <!-- End Full-Stack Development -->
+
+
+
+
+
+
+
+                    
+
+
+
+    <!-- Contact Section -->
+
+
+
+    <section id="contact" class="contact section light-background">
+
+
+
+
+
+
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+
+
+
+
+
+        <div class="row g-5">
+
+
+
+          <div class="col-lg-6">
+
+
+
+            <div class="content" data-aos="fade-up" data-aos-delay="200">
+
+
+
+              <div class="section-category mb-3">Contact</div>
+
+
+
+              <h2 class=>Contact Using Given Information or By Send Message</h2>
+
+
+
+              <div class="contact-info mt-5">
+
+
+
+                <div class="info-item d-flex mb-3">
+
+
+
+                  <i class="bi bi-envelope-at me-3"></i>
+
+
+
+                  <span>sandy29at@gmail.com</span>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="info-item d-flex mb-3">
+
+
+
+                  <i class="bi bi-telephone me-3"></i>
+
+
+
+                  <span>+91 6369050688</span>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="info-item d-flex mb-4">
+
+
+
+                  <i class="bi bi-geo-alt me-3"></i>
+
+
+
+                  <span>2 Veera Kovil Street Vellapadi, Vellore </span>
+
+
+
+                </div>
+
+                <div id="map" style="margin-top: 20px;">
+
+  <iframe 
+
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.1222608751264!2d79.13166737590017!3d12.90727838740608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3900577e1ceb%3A0x62069d4947bbff90!2sSanthosh%20home%2C%202%2C%20Veera%20Koil%20St%2C%20Kosapet%2C%20Vellore%2C%20Tamil%20Nadu%20632001!5e0!3m2!1sen!2sin!4v1712565690812!5m2!1sen!2sin" 
+
+    width="100%" 
+
+    height="500" 
+
+    style="border:0; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.15);" 
+
+    allowfullscreen="" 
+
+    loading="lazy" 
+
+    referrerpolicy="no-referrer-when-downgrade">
+
+  </iframe>
+
+                </div>
+
+
+
+                <a href="https://www.google.com/maps/place/Santhosh+home,+2,+Veera+Koil+St,+Kosapet,+Vellore,+Tamil+Nadu+632001/@12.9072784,79.1338563,15z/data=!4m6!3m5!1s0x3bad3900577e1ceb:0x62069d4947bbff90!8m2!3d12.9072784!4d79.1338563!16s%2Fg%2F11vzbwmm_p" class="map-link d-inline-flex align-items-center">
+
+
+
+                  Open Map
+
+
+
+                  <i class="bi bi-arrow-right ms-2"></i>
+
+
+
+                </a>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+          
+
+
+
+          <div class="col-lg-6">
+
+
+
+            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
+
+
+
+              <div class="card-body p-4 p-lg-5">
+
+
+
+
+
+
+
+                <form action="https://formspree.io/f/mgvogkkg" method="POST">
+
+
+
+                  <div class="row gy-4">
+
+
+
+
+
+
+
+                    <div class="col-12">
+
+
+
+                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-12 ">
+
+
+
+                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-12">
+
+
+
+                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-12">
+
+
+
+                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                   
+
+
+
+                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                  </div>
+
+
+
+                </form>
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </section><!-- /Contact Section -->
+
+
+
+    
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+  <footer id="footer" class="footer">
+
+
+
+
+
+
+
+    <div class="container">
+
+
+
+      <div class="copyright text-center ">
+
+
+
+        <p>© <span>Copyright</span><strong class="px-1 sitename">Santhosh</strong> <span>All Rights Reserved</span></p>
+
+
+
+      </div>
+
+
+
+      <div class="social-links d-flex justify-content-center">
+
+
+
+        <a href="https://x.com/Sxndyhub?t=_Z3K8WbhGouBqVjmvco1pQ&s=09"><i class="bi bi-twitter-x"></i></a>
+
+
+
+        
+
+
+
+        <a href="https://www.instagram.com/sxndy.hub?igsh=MWc3cnhoYTg0aWl6MA=="><i class="bi bi-instagram"></i></a>
+
+
+
+        <a href="https://www.linkedin.com/in/santhosh-u-3a785426b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
+
+
+
+      </div>
+
+
+
+      <div class="credits">
+
+
+
+        
+
+
+
+        Designed by <a href="#">Santhosh</a>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </footer>
+
+
+
+
+
+
+
+  <!-- Scroll Top -->
+
+
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+
+
+
+  <!-- Vendor JS Files -->
+
+
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+
+  <script src="assets/vendor/aos/aos.js"></script>
+
+
+
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+
+
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+
+
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+
+
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+
+  <!-- Main JS File -->
+
+
+
+  <script src="assets/js/main.js"></script>
+
+
+
+<!-- Glass UI Welcome Popup -->
+<style>
+  #welcomePopup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 5px solid orange;
+    border-radius: 16px;
+    padding: 18px 20px;
+    max-width: 350px;
+    color: orange;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0 20px orange;
+    z-index: 9999;
+    display: none;
+    gap: 12px;
+    opacity: 1;
+    cursor: move;
+    animation: fadeInUp 0.6s ease;
+    transition: opacity 0.4s ease;
+  }
+
+  #welcomePopup.hide,
+  #particleCanvas.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #welcomePopup strong {
+    color: orange;
+    text-shadow: 0 0 8px orange;
+  }
+
+  #closeBtn {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .emojiBounce {
+    font-size: 26px;
+    animation: bounce 1.2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  canvas#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    transition: opacity 0.4s ease;
+  }
+
+  #greetText {
+    min-height: 48px;
+    white-space: pre-wrap;
+  }
+</style>
+
+<!-- Popup HTML -->
+<canvas id="particleCanvas"></canvas>
+<div id="welcomePopup">
+  <div class="emojiBounce" id="emojiIcon">✨</div>
+  <p id="greetText"></p>
+  <span id="closeBtn">&times;</span>
+</div>
+
+<!-- JavaScript -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("welcomePopup");
+    const closeBtn = document.getElementById("closeBtn");
+    const particleCanvas = document.getElementById("particleCanvas");
+    const ctx = particleCanvas.getContext("2d");
+    const emojiIcon = document.getElementById("emojiIcon");
+    const greetText = document.getElementById("greetText");
+
+    function resizeCanvas() {
+      particleCanvas.width = window.innerWidth;
+      particleCanvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    const hour = new Date().getHours();
+    let greet, emoji;
+    if (hour < 12) {
+      greet = "Good morning";
+      emoji = "☀️";
+    } else if (hour < 18) {
+      greet = "Good afternoon";
+      emoji = "🌤️";
+    } else {
+      greet = "Good evening";
+      emoji = "🌙";
+    }
+
+    emojiIcon.textContent = emoji;
+
+    const message = `${greet}! Welcome to Santhosh's Portfolio — explore & enjoy!`;
+    let charIndex = 0;
+
+    function typeText() {
+      if (charIndex < message.length) {
+        greetText.textContent += message.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeText, 40);
+      } else {
+        speak(message); // voice starts after typing is complete
+      }
+    }
+
+    function speak(text) {
+      const synth = window.speechSynthesis;
+      if (synth.speaking) synth.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.pitch = 1;
+      utter.rate = 1;
+      synth.speak(utter);
+    }
+
+    if (!sessionStorage.getItem("popupShown")) {
+      popup.style.display = "flex";
+      particleCanvas.style.display = "block";
+      sessionStorage.setItem("popupShown", "true");
+
+      typeText(); // Start typing animation
+
+      setTimeout(hidePopup, 7000);
+      document.body.addEventListener("click", hidePopup, { once: true });
+    }
+
+    function hidePopup() {
+      popup.classList.add("hide");
+      particleCanvas.classList.add("hide");
+      setTimeout(() => {
+        popup.style.display = "none";
+        particleCanvas.style.display = "none";
+      }, 400);
+    }
+
+    closeBtn.addEventListener("click", hidePopup);
+
+    // Drag
+    let isDragging = false, offsetX, offsetY;
+    popup.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      offsetX = e.clientX - popup.getBoundingClientRect().left;
+      offsetY = e.clientY - popup.getBoundingClientRect().top;
+      popup.style.transition = "none";
+    });
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        popup.style.left = e.clientX - offsetX + "px";
+        popup.style.top = e.clientY - offsetY + "px";
+        popup.style.right = "auto";
+        popup.style.bottom = "auto";
+      }
+    });
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+      popup.style.transition = "opacity 0.4s ease";
+    });
+
+    // Particles
+    const particles = [];
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: Math.random() * 3 + 1,
+        speedX: (Math.random() - 0.5) * 1.5,
+        speedY: (Math.random() - 0.5) * 1.5,
+        color: `hsl(${Math.random() * 360}, 100%, 70%)`
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+      particles.forEach(p => {
+        p.x += p.speedX;
+        p.y += p.speedY;
+        if (p.x < 0 || p.x > window.innerWidth) p.speedX *= -1;
+        if (p.y < 0 || p.y > window.innerHeight) p.speedY *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+  });
+</script>
+
+
+
+</body>
+
+
+
+
+
+
+
 </html>
